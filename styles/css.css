@@ -97,3 +97,79 @@ section{
 .header-image{
     width:100%; /* 100% of the width of whatever element this image is inside of */
 }
+
+
+/* .larger span{
+    display:block;
+
+    width:200px;
+    height:100px;
+    margin:25px;
+    padding:15px;
+    border:2px solid yellow;
+} */
+
+
+/***********************************************************
+						NAV
+***********************************************************/
+
+nav{
+    height:44px;
+    margin-bottom:20px;
+    border-bottom:2px solid #220044;
+}
+
+nav li{
+    float:left; /* this will make the li elements, which are block elements, sit next to each other */
+}
+
+nav a{
+    display:block; /* make the anchor tags into boxes so we can do something interesting to them */
+    text-align:center;
+    margin:0 5px; /* 0 on the top and bottom, 5px on the left and right */
+    text-decoration:none; /* removes the underline default from the link */
+    width:142px;
+    height:44px;
+}
+
+/* target the span, inside anchor tags, inside list items, inside the nav */
+nav li a span{
+    display: block;
+    float:left;
+    font-size:1.6rem; /* 1.6 time the root font size set in HTML */
+    line-height: 2.5em; /* 2.5 times the font size of this element */
+    color:#0FF; /* remember there is no font-color - color sets the font color */
+}
+
+nav a img{
+	width:22px;
+	padding: 0.7em 5px 0 15px; /* padding and margin can be set using multiple different units of measure
+    all of which are interchangable 
+    0.7 times the element's font size to the padding on the top
+    5px to the padding on the right
+    0 padding on the bottom - 0 doesn't need a unit, because 0 is always 0
+    15px to the padding on the left */
+	float:left;
+}
+
+/* apply the same properties to the hover state of the links in the nav, and also the element
+with the class current. */
+nav a:hover, .current{
+    background:#220044;
+	border-top-right-radius:15px;
+	border-top-left-radius:15px;
+}
+
+#play{
+	color:#0FF;
+	float:right; /* floating it the opposite way of the other floated elements - so it sits
+    on the right of the screen */
+	font-size:2.0rem;
+	background:#220044;
+	border:1px solid #0FF;
+	border-radius:10px; /* makes the corners look rounded */
+	padding:0.5em;
+    height:auto; /* override the height set on the nav a - auto asks the browser to automatically
+    calculate the height based on the content inside the element */
+}
