@@ -149,7 +149,7 @@ nav a:hover, .current{
 
 #play{
 	color:#0FF;
-	float:right; /* floating it the opposite way of the other floated elements - so it sits
+	/* float:right;  floating it the opposite way of the other floated elements - so it sits
     on the right of the screen */
 	font-size:2.0rem;
 	background:#220044;
@@ -158,6 +158,12 @@ nav a:hover, .current{
 	padding:0.5em;
     height:auto; /* override the height set on the nav a - auto asks the browser to automatically
     calculate the height based on the content inside the element */
+
+    /* use position fixed to make this button stay on screen, even when the user scrolls */
+    position:fixed;
+    /* set its position relative to the browser window using top/bottom, left/right */
+    top:5%;
+    right:10%;
 }
 
 /***********************************************************
